@@ -1,3 +1,4 @@
+# РЕЗУЛЬТАТИ ВИКОНАННЯ
 груд. 03, 2025 12:59:16 ДП org.hibernate.Version logVersion
 INFO: HHH000412: Hibernate ORM core version 5.6.14.Final
 груд. 03, 2025 12:59:16 ДП org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver resolveEntity
