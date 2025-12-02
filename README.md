@@ -1,427 +1,440 @@
-# Кроки для виконання
-1. Встановіть локально PostgreSQL, Maven та Java.
-1. Створіть базу даних college_db.
-1. Вкажіть правильне значення властивості `hibernate.connection.password` у файлі "src\main\resources\hibernate.cfg.xml".
-1. Зберіть програму за допомогою команди: `mvn clean install`.
-1. Запустіть програму за допомогою команди: `mvn exec:java -D"exec.mainClass=com.college.MainApp"`.
-1. Якщо термінал відображає знаки питання "?" замість українських символів, зконфігуруйте термінал на відображення шрифту в форматі UTF-8 виконавши команду `chcp 65001`.
-
-# Результати виконання програми
-```
-Oct 31, 2025 12:49:47 AM org.hibernate.Version logVersion
+груд. 03, 2025 12:59:16 ДП org.hibernate.Version logVersion
 INFO: HHH000412: Hibernate ORM core version 5.6.14.Final
-Oct 31, 2025 12:49:47 AM org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver resolveEntity
+груд. 03, 2025 12:59:16 ДП org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver resolveEntity
 WARN: HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-Oct 31, 2025 12:49:48 AM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+груд. 03, 2025 12:59:16 ДП org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
 INFO: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-Oct 31, 2025 12:49:48 AM org.hibernate.engine.jdbc.connections.internal.ConnectionProviderInitiator instantiateC3p0Provider
+груд. 03, 2025 12:59:17 ДП org.hibernate.engine.jdbc.connections.internal.ConnectionProviderInitiator instantiateC3p0Provider
 WARN: HHH000022: c3p0 properties were encountered, but the c3p0 provider class was not found on the classpath; these properties are going to be ignored.
-Oct 31, 2025 12:49:48 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+груд. 03, 2025 12:59:17 ДП org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
 WARN: HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-Oct 31, 2025 12:49:48 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
-INFO: HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/college_db]
-Oct 31, 2025 12:49:48 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+груд. 03, 2025 12:59:17 ДП org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/vet_clinik]
+груд. 03, 2025 12:59:17 ДП org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001001: Connection properties: {user=postgres, password=****}
-Oct 31, 2025 12:49:48 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+груд. 03, 2025 12:59:17 ДП org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001003: Autocommit mode: false
-Oct 31, 2025 12:49:48 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+груд. 03, 2025 12:59:17 ДП org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
 INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
-Oct 31, 2025 12:49:49 AM org.hibernate.dialect.Dialect <init>
+груд. 03, 2025 12:59:17 ДП org.hibernate.dialect.Dialect <init>
 INFO: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-Hibernate: 
-
-    alter table class_schedules
-       drop constraint FKme1t7iugw17i8ye64yafbkpno
-Oct 31, 2025 12:49:50 AM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
-INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7248faa7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-Hibernate: 
-
-    alter table class_schedules
-       drop constraint FK2rlbqylwb07utwfushcbsv2an
 Hibernate:
 
-    alter table class_schedules
-       drop constraint FKjrtiswbp5lypa0jqhwtbfnlxc
-Hibernate: 
-
-    alter table courses
-       drop constraint FKsv2mdywju86wq12x4did4xd78
+    alter table appointment
+       drop constraint FK8y0it8yrd322ps2jklm5f8e07
+груд. 03, 2025 12:59:17 ДП org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1a674e4a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 Hibernate:
 
-    alter table enrollments
-       drop constraint FKho8mcicp4196ebpltdn9wl6co
+    alter table appointment
+       drop constraint FK97ym201tvtxg3slhf3khn36ye
 Hibernate:
 
-    alter table enrollments
-       drop constraint FK8kf1u1857xgo56xbfmnif2c51
-Hibernate: 
-
-    alter table students
-       drop constraint FKalgc33nsolpmegw14o3h6g6rr
+    alter table pet
+       drop constraint FK7qfti9yba86tgfe9oobeqxfxg
 Hibernate:
 
-    alter table teachers
-       drop constraint FKrgr03njnvpwuktc0mntf8t6o0
+    drop table if exists appointment cascade
 Hibernate:
 
-    drop table if exists class_schedules cascade
-Hibernate: 
-
-    drop table if exists courses cascade
-Hibernate: 
-
-    drop table if exists departments cascade
-Hibernate: 
-
-    drop table if exists enrollments cascade
+    drop table if exists owner cascade
 Hibernate:
 
-    drop table if exists rooms cascade
+    drop table if exists pet cascade
 Hibernate:
 
-    drop table if exists students cascade
-Hibernate: 
+    drop table if exists veterinarian cascade
+Hibernate:
 
-    drop table if exists teachers cascade
-Hibernate: 
-
-    create table class_schedules (
-       schedule_id  serial not null,
-        end_time time,
-        semester varchar(255),
-        start_time time,
-        year int4 not null,
-        course_id int4,
-        room_id int4,
-        teacher_id int4,
-        primary key (schedule_id)
+    create table appointment (
+       appointment_id  serial not null,
+        appointment_date date not null,
+        appointment_time time not null,
+        diagnosis_treatment varchar(255) not null,
+        is_vaccinated boolean not null,
+        pet_id int4 not null,
+        vet_id int4 not null,
+        primary key (appointment_id)
     )
-Oct 31, 2025 12:49:50 AM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
-INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@75bab420] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-Hibernate: 
+груд. 03, 2025 12:59:17 ДП org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2b5b60b3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+Hibernate:
 
-    create table courses (
-       course_id  serial not null,
-        course_name varchar(255),
-        credits int4 not null,
-        department_id int4,
-        primary key (course_id)
-    )
-Hibernate: 
-
-    create table departments (
-       department_id  serial not null,
-        location varchar(255),
-        name varchar(255),
-        primary key (department_id)
-    )
-Hibernate: 
-
-    create table enrollments (
-       enrollment_id  serial not null,
-        enrollment_date date,
-        course_id int4,
-        student_id int4,
-        primary key (enrollment_id)
-    )
-Hibernate: 
-
-    create table rooms (
-       room_id  serial not null,
-        capacity int4,
-        room_number varchar(255),
-        primary key (room_id)
-    )
-Hibernate: 
-
-    create table students (
-       student_id  serial not null,
+    create table owner (
+       owner_id  serial not null,
+        apartment varchar(255),
+        city varchar(255),
         first_name varchar(255),
+        house varchar(255),
         last_name varchar(255),
-        department_id int4,
-        primary key (student_id)
+        middle_name varchar(255),
+        phone varchar(255),
+        street varchar(255),
+        primary key (owner_id)
     )
-Hibernate: 
+Hibernate:
 
-    create table teachers (
-       teacher_id  serial not null,
-        first_name varchar(255),
-        last_name varchar(255),
-        department_id int4,
-        primary key (teacher_id)
+    create table pet (
+       pet_id  serial not null,
+        name varchar(255) not null,
+        species varchar(255),
+        owner_id int4 not null,
+        primary key (pet_id)
     )
-Hibernate: 
-
-    alter table class_schedules
-       add constraint FKme1t7iugw17i8ye64yafbkpno
-       foreign key (course_id)
-       references courses
-Hibernate: 
-
-    alter table class_schedules
-       add constraint FK2rlbqylwb07utwfushcbsv2an
-       foreign key (room_id)
-       references rooms
 Hibernate:
 
-    alter table class_schedules
-       add constraint FKjrtiswbp5lypa0jqhwtbfnlxc
-       foreign key (teacher_id)
-       references teachers
+    create table veterinarian (
+       vet_id  serial not null,
+        experience_years int4,
+        full_name varchar(255) not null,
+        primary key (vet_id)
+    )
 Hibernate:
 
-    alter table courses
-       add constraint FKsv2mdywju86wq12x4did4xd78
-       foreign key (department_id)
-       references departments
-Hibernate: 
-
-    alter table enrollments
-       add constraint FKho8mcicp4196ebpltdn9wl6co
-       foreign key (course_id)
-       references courses
+    alter table owner
+       add constraint UK_q3nfx0w9lmfnyeepg23ccenhu unique (phone)
 Hibernate:
 
-    alter table enrollments
-       add constraint FK8kf1u1857xgo56xbfmnif2c51
-       foreign key (student_id)
-       references students
-Hibernate: 
-
-    alter table students
-       add constraint FKalgc33nsolpmegw14o3h6g6rr
-       foreign key (department_id)
-       references departments
+    alter table appointment
+       add constraint FK8y0it8yrd322ps2jklm5f8e07
+       foreign key (pet_id)
+       references pet
 Hibernate:
 
-    alter table teachers
-       add constraint FKrgr03njnvpwuktc0mntf8t6o0
-       foreign key (department_id)
-       references departments
-Hibernate: 
+    alter table appointment
+       add constraint FK97ym201tvtxg3slhf3khn36ye
+       foreign key (vet_id)
+       references veterinarian
+Hibernate:
+
+    alter table pet
+       add constraint FK7qfti9yba86tgfe9oobeqxfxg
+       foreign key (owner_id)
+       references owner
+>>> Завантаження даних...
+Hibernate:
     insert
     into
-        departments
-        (location, name)
-    values
-        (?, ?)
-Hibernate: 
-    insert
-    into
-        departments
-        (location, name)
+        veterinarian
+        (experience_years, full_name)
     values
         (?, ?)
 Hibernate:
     insert
     into
-        teachers
-        (department_id, first_name, last_name)
-    values
-        (?, ?, ?)
-Hibernate:
-    insert
-    into
-        teachers
-        (department_id, first_name, last_name)
-    values
-        (?, ?, ?)
-Hibernate: 
-    insert
-    into
-        students
-        (department_id, first_name, last_name)
-    values
-        (?, ?, ?)
-Hibernate:
-    insert
-    into
-        students
-        (department_id, first_name, last_name)
-    values
-        (?, ?, ?)
-Hibernate: 
-    insert
-    into
-        students
-        (department_id, first_name, last_name)
-    values
-        (?, ?, ?)
-Hibernate:
-    insert
-    into
-        students
-        (department_id, first_name, last_name)
-    values
-        (?, ?, ?)
-Hibernate:
-    insert
-    into
-        students
-        (department_id, first_name, last_name)
-    values
-        (?, ?, ?)
-Hibernate:
-    insert
-    into
-        courses
-        (course_name, credits, department_id)
-    values
-        (?, ?, ?)
-Hibernate: 
-    insert
-    into
-        courses
-        (course_name, credits, department_id)
-    values
-        (?, ?, ?)
-Hibernate:
-    insert
-    into
-        rooms
-        (capacity, room_number)
-    values
-        (?, ?)
-Hibernate: 
-    insert
-    into
-        rooms
-        (capacity, room_number)
+        veterinarian
+        (experience_years, full_name)
     values
         (?, ?)
 Hibernate:
     insert
     into
-        class_schedules
-        (course_id, end_time, room_id, semester, start_time, teacher_id, year)    
+        veterinarian
+        (experience_years, full_name)
     values
-        (?, ?, ?, ?, ?, ?, ?)
-Hibernate: 
-    insert
-    into
-        class_schedules
-        (course_id, end_time, room_id, semester, start_time, teacher_id, year)    
-    values
-        (?, ?, ?, ?, ?, ?, ?)
+        (?, ?)
 Hibernate:
     insert
     into
-        enrollments
-        (course_id, enrollment_date, student_id)
+        owner
+        (apartment, city, first_name, house, last_name, middle_name, phone, street)
     values
-        (?, ?, ?)
+        (?, ?, ?, ?, ?, ?, ?, ?)
 Hibernate:
     insert
     into
-        enrollments
-        (course_id, enrollment_date, student_id)
+        pet
+        (name, owner_id, species)
     values
         (?, ?, ?)
 Hibernate:
     insert
     into
-        enrollments
-        (course_id, enrollment_date, student_id)
+        appointment
+        (appointment_date, appointment_time, diagnosis_treatment, is_vaccinated, pet_id, vet_id)
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        owner
+        (apartment, city, first_name, house, last_name, middle_name, phone, street)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        pet
+        (name, owner_id, species)
     values
         (?, ?, ?)
 Hibernate:
     insert
     into
-        enrollments
-        (course_id, enrollment_date, student_id)
+        appointment
+        (appointment_date, appointment_time, diagnosis_treatment, is_vaccinated, pet_id, vet_id)
     values
-        (?, ?, ?)
-Hibernate: 
+        (?, ?, ?, ?, ?, ?)
+Hibernate:
     insert
     into
-        enrollments
-        (course_id, enrollment_date, student_id)
+        owner
+        (apartment, city, first_name, house, last_name, middle_name, phone, street)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        pet
+        (name, owner_id, species)
     values
         (?, ?, ?)
-Дані успішно збережено!
-Hibernate: 
+Hibernate:
+    insert
+    into
+        appointment
+        (appointment_date, appointment_time, diagnosis_treatment, is_vaccinated, pet_id, vet_id)
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        owner
+        (apartment, city, first_name, house, last_name, middle_name, phone, street)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        pet
+        (name, owner_id, species)
+    values
+        (?, ?, ?)
+Hibernate:
+    insert
+    into
+        appointment
+        (appointment_date, appointment_time, diagnosis_treatment, is_vaccinated, pet_id, vet_id)
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        owner
+        (apartment, city, first_name, house, last_name, middle_name, phone, street)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        pet
+        (name, owner_id, species)
+    values
+        (?, ?, ?)
+Hibernate:
+    insert
+    into
+        appointment
+        (appointment_date, appointment_time, diagnosis_treatment, is_vaccinated, pet_id, vet_id)
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        owner
+        (apartment, city, first_name, house, last_name, middle_name, phone, street)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        pet
+        (name, owner_id, species)
+    values
+        (?, ?, ?)
+Hibernate:
+    insert
+    into
+        appointment
+        (appointment_date, appointment_time, diagnosis_treatment, is_vaccinated, pet_id, vet_id)
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        owner
+        (apartment, city, first_name, house, last_name, middle_name, phone, street)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        pet
+        (name, owner_id, species)
+    values
+        (?, ?, ?)
+Hibernate:
+    insert
+    into
+        appointment
+        (appointment_date, appointment_time, diagnosis_treatment, is_vaccinated, pet_id, vet_id)
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        owner
+        (apartment, city, first_name, house, last_name, middle_name, phone, street)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        pet
+        (name, owner_id, species)
+    values
+        (?, ?, ?)
+Hibernate:
+    insert
+    into
+        appointment
+        (appointment_date, appointment_time, diagnosis_treatment, is_vaccinated, pet_id, vet_id)
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        owner
+        (apartment, city, first_name, house, last_name, middle_name, phone, street)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        pet
+        (name, owner_id, species)
+    values
+        (?, ?, ?)
+Hibernate:
+    insert
+    into
+        appointment
+        (appointment_date, appointment_time, diagnosis_treatment, is_vaccinated, pet_id, vet_id)
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        owner
+        (apartment, city, first_name, house, last_name, middle_name, phone, street)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        pet
+        (name, owner_id, species)
+    values
+        (?, ?, ?)
+Hibernate:
+    insert
+    into
+        appointment
+        (appointment_date, appointment_time, diagnosis_treatment, is_vaccinated, pet_id, vet_id)
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        owner
+        (apartment, city, first_name, house, last_name, middle_name, phone, street)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        pet
+        (name, owner_id, species)
+    values
+        (?, ?, ?)
+Hibernate:
+    insert
+    into
+        appointment
+        (appointment_date, appointment_time, diagnosis_treatment, is_vaccinated, pet_id, vet_id)
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        owner
+        (apartment, city, first_name, house, last_name, middle_name, phone, street)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate:
+    insert
+    into
+        pet
+        (name, owner_id, species)
+    values
+        (?, ?, ?)
+Hibernate:
+    insert
+    into
+        appointment
+        (appointment_date, appointment_time, diagnosis_treatment, is_vaccinated, pet_id, vet_id)
+    values
+        (?, ?, ?, ?, ?, ?)
+>>> Дані успішно збережено!
+Hibernate:
     select
-        student1_.first_name as col_0_0_,
-        student1_.last_name as col_1_0_,
-        teacher4_.first_name as col_2_0_,
-        teacher4_.last_name as col_3_0_,
-        course2_.course_name as col_4_0_,
-        department5_.name as col_5_0_,
-        room6_.room_number as col_6_0_,
-        classsched3_.semester as col_7_0_,
-        classsched3_.year as col_8_0_,
-        classsched3_.start_time as col_9_0_,
-        classsched3_.end_time as col_10_0_
+        appointmen0_.appointment_date as col_0_0_,
+        appointmen0_.appointment_time as col_1_0_,
+        owner2_.last_name as col_2_0_,
+        owner2_.first_name as col_3_0_,
+        owner2_.middle_name as col_4_0_,
+        owner2_.phone as col_5_0_,
+        owner2_.city as col_6_0_,
+        owner2_.street as col_7_0_,
+        owner2_.house as col_8_0_,
+        owner2_.apartment as col_9_0_,
+        pet1_.name as col_10_0_,
+        pet1_.species as col_11_0_,
+        veterinari3_.full_name as col_12_0_,
+        veterinari3_.experience_years as col_13_0_,
+        appointmen0_.diagnosis_treatment as col_14_0_,
+        appointmen0_.is_vaccinated as col_15_0_
     from
-        enrollments enrollment0_
+        appointment appointmen0_
     inner join
-        students student1_
-            on enrollment0_.student_id=student1_.student_id
+        pet pet1_
+            on appointmen0_.pet_id=pet1_.pet_id
     inner join
-        courses course2_
-            on enrollment0_.course_id=course2_.course_id
+        owner owner2_
+            on pet1_.owner_id=owner2_.owner_id
     inner join
-        class_schedules classsched3_
-            on course2_.course_id=classsched3_.course_id
-    inner join
-        teachers teacher4_
-            on classsched3_.teacher_id=teacher4_.teacher_id
-    inner join
-        departments department5_
-            on course2_.department_id=department5_.department_id
-    inner join
-        rooms room6_
-            on classsched3_.room_id=room6_.room_id
-Студент: Аліса Мельник
-Викладач: Іван Петренко
-Курс: Вступ до програмування
-Кафедра: Комп`ютерні науки
-Аудиторія: 210
-Семестр: Осінь
-Рік: 2024
-Час початку: 09:00
-Час закінчення: 10:30
---------------------------------------------------
-Студент: Катерина Левченко
-Викладач: Іван Петренко
-Курс: Вступ до програмування
-Кафедра: Комп`ютерні науки
-Аудиторія: 210
-Семестр: Осінь
-Рік: 2024
-Час початку: 09:00
-Час закінчення: 10:30
---------------------------------------------------
-Студент: Дмитро Шевченко
-Викладач: Іван Петренко
-Курс: Вступ до програмування
-Кафедра: Комп`ютерні науки
-Аудиторія: 210
-Семестр: Осінь
-Рік: 2024
-Час початку: 09:00
-Час закінчення: 10:30
---------------------------------------------------
-Студент: Богдан Іванов
-Викладач: Оксана Коваль
-Курс: Математичний аналіз I
-Кафедра: Математика
-Аудиторія: 212
-Семестр: Осінь
-Рік: 2024
-Час початку: 11:00
-Час закінчення: 12:30
---------------------------------------------------
-Студент: Олена Петренко
-Викладач: Оксана Коваль
-Курс: Математичний аналіз I
-Кафедра: Математика
-Аудиторія: 212
-Семестр: Осінь
-Рік: 2024
-Час початку: 11:00
-Час закінчення: 12:30
---------------------------------------------------
-Oct 31, 2025 12:49:51 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PoolState stop
-INFO: HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/college_db]
-```
+        veterinarian veterinari3_
+            on appointmen0_.vet_id=veterinari3_.vet_id
+    order by
+        appointmen0_.appointment_date,
+        appointmen0_.appointment_time
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Власник тварини           | Тварина і вид   | Ветеринар                 | Дата         | Час   | Діагноз                   | Адреса власника                | Вакцинація | Стаж  | Телефон      |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Коваленко Олег Іванович   | Барсік (кіт)       | Петренко Ірина Василівна  | 2024-09-14   | 10:00    | Щеплення комплекс.             | м. Київ, вул. Шевченка, 12,... | Так        | 5     | 380501234567    |
+| Сидоренко Марія Олексі... | Рекс (собака)      | Петренко Ірина Василівна  | 2024-09-14   | 11:30    | Щеплення від сказу             | м. Київ, вул. Лесі Українки, 3 | Так        | 5     | 380661234567    |
+| Бондаренко Дмитро Серг... | Муся (кішка)       | Іваненко Андрій Миколайович | 2024-09-14   | 14:20    | Огляд після опер.              | м. Київ, просп. Перемоги, 33   | Ні         | 3     | 380731234567    |
+| Ткаченко Юлія Ігорівна    | Джек (собака)      | Іваненко Андрій Миколайович | 2024-09-14   | 15:30    | Чищення зубів                  | м. Київ, вул. Хрещатик, 25     | Ні         | 3     | 380671234567    |
+| Кравченко Сергій Волод... | Зірка (кішка)      | Мельник Оксана Петрівна   | 2024-09-15   | 09:15    | Лікування шкіри                | м. Київ, вул. Саксаганськог... | Ні         | 7     | 380631234567    |
+| Марченко Ірина Олегівна   | Буч (собака)       | Мельник Оксана Петрівна   | 2024-09-15   | 11:00    | Щеплення комплекс.             | м. Київ, Б. Хмельницького, 10  | Так        | 7     | 380501234568    |
+| Шевчук Павло Миколайович  | Сімба (кіт)        | Петренко Ірина Василівна  | 2024-09-15   | 14:45    | Кастрація                      | м. Київ, вул. Антоновича, 72   | Ні         | 5     | 380661234568    |
+| Гончарук Наталія Вікто... | Ласка (собака)     | Іваненко Андрій Миколайович | 2024-09-16   | 10:30    | Щеплення від сказу             | м. Київ, В. Васильківська, 5   | Так        | 3     | 380731234568    |
+| Лисенко Артем Олегович    | Мурка (кішка)      | Мельник Оксана Петрівна   | 2024-09-16   | 12:15    | Лікування очей                 | м. Київ, вул. Дегтярівська, 33 | Ні         | 7     | 380671234568    |
+| Павленко Катерина Серг... | Тедді (собака)     | Петренко Ірина Василівна  | 2024-09-16   | 15:00    | Щеплення комплекс.             | м. Київ, Є. Коновальця, 18     | Так        | 5     | 380631234568    |
+| Ковальчук Михайло Іван... | Рудь (кіт)         | Іваненко Андрій Миколайович | 2024-09-17   | 09:45    | Огляд після лікув.             | м. Київ, вул. Дорогожицька, 2  | Ні         | 3     | 380501234569    |
+| Бондаренко Дмитро Серг... | Муся (кішка)       | Мельник Оксана Петрівна   | 2024-09-17   | 13:30    | Щеплення комплекс.             | м. Київ, просп. Перемоги, 33   | Так        | 7     | 380661234569    |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+груд. 03, 2025 12:59:18 ДП org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PoolState stop
+INFO: HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/vet_clinik]
